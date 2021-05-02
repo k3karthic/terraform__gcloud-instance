@@ -26,7 +26,7 @@ provider "google" {}
 //
 
 resource "google_service_account" "free" {
-    account_id = "mg-gcloud--instance"
+  account_id = "mg-gcloud--instance"
 }
 
 //
@@ -34,8 +34,8 @@ resource "google_service_account" "free" {
 //
 
 resource "google_compute_instance" "free" {
-  name = var.name
-  zone = var.zone
+  name         = var.name
+  zone         = var.zone
   machine_type = "f1-micro"
 
   tags = [
@@ -44,8 +44,8 @@ resource "google_compute_instance" "free" {
 
   boot_disk {
     initialize_params {
-        size = 30
-        image = var.image_id
+      size  = 30
+      image = var.image_id
     }
   }
 
@@ -57,13 +57,16 @@ resource "google_compute_instance" "free" {
   }
 
   service_account {
-    email = google_service_account.free.email
+    email  = google_service_account.free.email
     scopes = ["cloud-platform"]
   }
 
+  labels = {
+    "os" = var.image_os
+  }
+
   metadata = {
-    "os"              = var.image_os
-    "ydns_host"       = var.ydns_host
-    "ssh-keys"        = "freebsd:${file("ssh/google.pub")}"
+    "ydns_host" = var.ydns_host
+    "ssh-keys"  = "freebsd:${file("ssh/google.pub")}"
   }
 }
