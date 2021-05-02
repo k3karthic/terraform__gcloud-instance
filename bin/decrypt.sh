@@ -14,7 +14,7 @@ for f in $FILES; do
     decrypt $( echo $f | sed 's/\.gpg//' )
 done
 
-FILES=$(ls ssh/oracle*.gpg)
+FILES=$(ls ssh/google*.gpg)
 for f in $FILES; do
     decrypt $( echo $f | sed 's/\.gpg//' )
 done
