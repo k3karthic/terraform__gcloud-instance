@@ -20,7 +20,7 @@ Create a Terraform plan by running plan.sh; the script will read input variables
 ./bin/plan.sh
 ```
 
-To avoid fetching the latest state of resources from OCI, run the following command.
+To avoid fetching the latest state of resources, run the following command.
 
 ```
 ./bin/plan.sh --refresh=false
