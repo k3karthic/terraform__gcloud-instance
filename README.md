@@ -1,10 +1,10 @@
-# Terraform - Deploy a single instance on Google Cloud
+# Terraform - Deploy a single instance in Google Cloud
 
-Deploy a single instance on Google Cloud running in the [Always Free](https://cloud.google.com/free) tier.
+Deploy a single instance in Google Cloud running under the [Always Free](https://cloud.google.com/free) tier.
 
-For more control over network security, deploy the instance into a custom Virtual Cloud Network using the Terraform script at [https://github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc).
+For more control over network security, deploy the instance into a custom VPC using the Terraform script at [https://github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc).
 
-For basic setup (swap, fail2ban), use the Ansible playbook at [https://github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic).
+For basic setup (e.g. fail2ban), use the Ansible playbook at [https://github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic).
 
 ## Input Variables
 
