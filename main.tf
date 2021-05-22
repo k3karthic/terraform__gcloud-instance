@@ -62,8 +62,9 @@ resource "google_compute_instance" "free" {
   }
 
   labels = {
-    "os"        = var.image_os
-    "ydns_host" = "yes"
+    "os"          = var.image_os
+    "ydns_host"   = "yes"
+    "tor_service" = "yes"
   }
 
   metadata = {
