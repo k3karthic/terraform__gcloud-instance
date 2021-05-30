@@ -39,7 +39,8 @@ resource "google_compute_instance" "free" {
   machine_type = "f1-micro"
 
   tags = [
-    "public"
+    "public",
+    "shadowsocks"
   ]
 
   boot_disk {
@@ -65,6 +66,7 @@ resource "google_compute_instance" "free" {
     "os"          = var.image_os
     "ydns_host"   = "yes"
     "tor_service" = "yes"
+    "shadowsocks_service" = "yes"
   }
 
   metadata = {
