@@ -36,7 +36,7 @@ resource "google_service_account" "free" {
 resource "google_compute_instance" "free" {
   name         = var.name
   zone         = var.zone
-  machine_type = "f1-micro"
+  machine_type = "e2-micro"
 
   tags = [
     "public",
