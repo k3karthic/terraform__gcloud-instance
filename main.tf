@@ -34,9 +34,11 @@ resource "google_service_account" "free" {
 //
 
 resource "google_compute_instance" "free" {
-  name         = var.name
-  zone         = var.zone
-  machine_type = "e2-micro"
+  name = var.name
+  zone = var.zone
+
+  machine_type   = "e2-micro"
+  desired_status = "RUNNING"
 
   tags = [
     "public",
@@ -63,9 +65,9 @@ resource "google_compute_instance" "free" {
   }
 
   labels = {
-    "os"          = var.image_os
-    "ydns_host"   = "yes"
-    "tor_service" = "yes"
+    "os"                  = var.image_os
+    "ydns_host"           = "yes"
+    "tor_service"         = "yes"
     "shadowsocks_service" = "yes"
   }
 
