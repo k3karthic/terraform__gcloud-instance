@@ -1,10 +1,17 @@
 # Terraform - Deploy a single instance in Google Cloud
 
-Deploy a single instance in Google Cloud running under the [Always Free](https://cloud.google.com/free) tier.
+A [Terraform](https://www.terraform.io/) script to deploy a single instance in Google Cloud running under the [Always Free](https://cloud.google.com/free) tier.
 
-For more control over network security, deploy the instance into a custom VPC using the Terraform script at [https://github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc).
+A custom VPC allows for more control over network security. The Terraform script below deploys the instance into a custom VPC,
+[https://github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc).
 
-For basic setup (e.g. fail2ban), use the Ansible playbook at [https://github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic).
+The following Ansible playbook covers the Basic setup (e.g. swap, fail2ban),
+[https://github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic).
+
+## Code Mirrors
+
+* GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance/)
+* GitHub: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance/)
 
 ## Input Variables
 
@@ -12,39 +19,28 @@ Create a file to store the input variables using the sample file `uscentral.tfva
 
 ## Deployment
 
-### Step 1
+1. Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
+	```
+	./bin/plan.sh
+	```
 
-Create a Terraform plan by running plan.sh; the script will read input variables from the file uscentral.tfvars
+	To avoid fetching the latest state of resources, use the following command.
+	```
+	./bin/plan.sh -refresh=false
+	```
 
-```
-./bin/plan.sh
-```
+1. Review the plan using the following command.
+	```
+	./bin/view.sh
+	```
 
-To avoid fetching the latest state of resources, run the following command.
-
-```
-./bin/plan.sh --refresh=false
-```
-
-### Step 2
-
-Review the generated plan
-
-```
-./bin/view.sh
-```
-
-### Step 3
-
-Run the verified plan
-
-```
-./bin/apply.sh
-```
+1. [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
+	```
+	./bin/apply.sh
 
 ## Encryption
 
-Sensitive files like the input variables (uscentral.tfvars) and Terraform state files are encrypted before being stored in the repository.
+Encrypt sensitive files (input variables, [Terraform state](https://www.terraform.io/docs/language/state/index.html) files) before saving them. `.gitignore` must contain the unencrypted file paths.
 
 You must add the unencrypted file paths to `.gitignore`.
 
