@@ -31,14 +31,14 @@ Documentation for the [HashiCorp Google provider](https://registry.terraform.io/
 ## Deployment
 
 1. Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
-	```
-	./bin/plan.sh
-	```
+```
+./bin/plan.sh
+```
 
-	To avoid fetching the latest state of resources, use the following command.
-	```
-	./bin/plan.sh -refresh=false
-	```
+To avoid fetching the latest state of resources, use the following command.
+```
+./bin/plan.sh -refresh=false
+```
 
 1. Review the plan using the following command.
 	```
