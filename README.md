@@ -15,11 +15,11 @@ The following Ansible playbook covers the Basic setup (e.g. swap, fail2ban),
 ## Code Mirrors
 
 * GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance/)
-* GitHub: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance/)
+* Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance/)
 
 ## Input Variables
 
-Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Keep `uscentral.tfvars.sample` as a reference. Use `uscentral.tfvars` as the filename or change the name in the following files,
+Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Use `uscentral.tfvars.sample` as a reference. Keep `uscentral.tfvars` as the filename or change the name in the following files,
 * `bin/plan.sh`
 
 ## Authentication
@@ -48,6 +48,7 @@ Documentation for the [HashiCorp Google provider](https://registry.terraform.io/
 1. [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
 	```
 	./bin/apply.sh
+	```
 
 ## Encryption
 
