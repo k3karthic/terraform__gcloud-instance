@@ -41,14 +41,14 @@ To avoid fetching the latest state of resources, use the following command.
 ```
 
 1. Review the plan using the following command.
-	```
-	./bin/view.sh
-	```
+```
+./bin/view.sh
+```
 
 1. [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
-	```
-	./bin/apply.sh
-	```
+```
+./bin/apply.sh
+```
 
 ## Encryption
 
