@@ -40,12 +40,12 @@ To avoid fetching the latest state of resources, use the following command.
 ./bin/plan.sh -refresh=false
 ```
 
-1. Review the plan using the following command.
+2. Review the plan using the following command.
 ```
 ./bin/view.sh
 ```
 
-1. [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
+3. [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
 ```
 ./bin/apply.sh
 ```
