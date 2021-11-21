@@ -32,22 +32,22 @@ Documentation for the [HashiCorp Google provider](https://registry.terraform.io/
 
 *Step 1:* Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
 ```
-./bin/plan.sh
+$ ./bin/plan.sh
 ```
 
 To avoid fetching the latest state of resources, use the following command.
 ```
-./bin/plan.sh -refresh=false
+$ ./bin/plan.sh -refresh=false
 ```
 
 *Step 2:* Review the plan using the following command.
 ```
-./bin/view.sh
+$ ./bin/view.sh
 ```
 
 *Step 3:* [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
 ```
-./bin/apply.sh
+$ ./bin/apply.sh
 ```
 
 ## Encryption
@@ -59,11 +59,11 @@ You must add the unencrypted file paths to `.gitignore`.
 Use the following command to decrypt the files after cloning the repository,
 
 ```
-./bin/decrypt.sh
+$ ./bin/decrypt.sh
 ```
 
 Use the following command after running terraform to update the encrypted files,
 
 ```
-./bin/encrypt.sh <gpg key id>
+$ ./bin/encrypt.sh <gpg key id>
 ```
