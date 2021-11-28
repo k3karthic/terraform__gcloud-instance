@@ -2,7 +2,7 @@
 
 A [Terraform](https://www.terraform.io/) script to deploy a single instance in Google Cloud running under the [Always Free](https://cloud.google.com/free) tier.
 
-A custom VPC allows for more control over network security. The Terraform script below deploys the instance into a custom VPC,
+A custom VPC allows for more control over network security. The Terraform script below creates a custom VPC,
 * terraform__gcloud-vpc
     * GitHub: [github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc)
     * Codeberg: [codeberg.org/k3karthic/terraform__gcloud-vpc](https://codeberg.org/k3karthic/terraform__gcloud-vpc)
@@ -30,7 +30,7 @@ Documentation for the [HashiCorp Google provider](https://registry.terraform.io/
 
 ## Deployment
 
-*Step 1:* Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
+**Step 1:** Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
 ```
 $ ./bin/plan.sh
 ```
@@ -40,12 +40,12 @@ To avoid fetching the latest state of resources, use the following command.
 $ ./bin/plan.sh -refresh=false
 ```
 
-*Step 2:* Review the plan using the following command.
+**Step 2:** Review the plan using the following command.
 ```
 $ ./bin/view.sh
 ```
 
-*Step 3:* [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
+**Step 3:** [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
 ```
 $ ./bin/apply.sh
 ```
