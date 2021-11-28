@@ -7,12 +7,12 @@ A custom VPC allows for more control over network security. The Terraform script
     * GitHub: [github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc)
     * Codeberg: [codeberg.org/k3karthic/terraform__gcloud-vpc](https://codeberg.org/k3karthic/terraform__gcloud-vpc)
 
-The following Ansible playbook covers the Basic setup (e.g. swap, fail2ban),
+The following Ansible playbook covers basic setup for FreeBSD (e.g. swap, fail2ban),
 * ansible__freebsd-basic
     * GitHub: [github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic)
     * Codeberg: [codeberg.org/k3karthic/ansible__freebsd-basic](https://codeberg.org/k3karthic/ansible__freebsd-basic)
 
-You can get a free static hostname for the instance using the Ansible playbook below,
+You can get a free hostname for the instance using the Ansible playbook below,
 * ansible__gcloud-ydns
     * GitHub: [github.com/k3karthic/ansible__gcloud-ydns](https://github.com/k3karthic/ansible__gcloud-ydns)
     * Codeberg: [codeberg.org/k3karthic/ansible__gcloud-ydns](https://codeberg.org/k3karthic/ansible__gcloud-ydns)
@@ -27,7 +27,7 @@ You can get a free static hostname for the instance using the Ansible playbook b
 **Step 1:** Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Use `uscentral.tfvars.sample` as a reference. Keep `uscentral.tfvars` as the filename or change the name in the following files,
 * `bin/plan.sh`
 
-**Step 2:** Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC use `default` as the value.
+**Step 2:** Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC, use `default` as the value.
 
 **Step 3:** Create a hostname in [YDNS](https://ydns.io/) and update the same in `ydns_host`.
 
