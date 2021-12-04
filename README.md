@@ -39,22 +39,22 @@ You can get a free hostname for the instance using the Ansible playbook below,
 
 ## Deployment
 
-**Step 1:** Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning).
+**Step 1:** Use the following command to create a [Terraform plan](https://www.terraform.io/docs/cli/run/index.html#planning),
 ```
 $ ./bin/plan.sh
 ```
 
-To avoid fetching the latest state of resources, use the following command.
+To avoid fetching the latest state of resources, use the following command,
 ```
 $ ./bin/plan.sh -refresh=false
 ```
 
-**Step 2:** Review the plan using the following command.
+**Step 2:** Review the plan using the following command,
 ```
 $ ./bin/view.sh
 ```
 
-**Step 3:** [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command.
+**Step 3:** [Apply](https://www.terraform.io/docs/cli/run/index.html#applying) the plan using the following command,
 ```
 $ ./bin/apply.sh
 ```
