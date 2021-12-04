@@ -7,7 +7,7 @@ A custom VPC allows for more control over network security. The Terraform script
     * GitHub: [github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc)
     * Codeberg: [codeberg.org/k3karthic/terraform__gcloud-vpc](https://codeberg.org/k3karthic/terraform__gcloud-vpc)
 
-The following Ansible playbook covers basic setup for FreeBSD (e.g. swap, fail2ban),
+The following Ansible playbook covers basic setup for FreeBSD (e.g, swap, fail2ban),
 * ansible__freebsd-basic
     * GitHub: [github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic)
     * Codeberg: [codeberg.org/k3karthic/ansible__freebsd-basic](https://codeberg.org/k3karthic/ansible__freebsd-basic)
@@ -20,7 +20,7 @@ You can get a free hostname for the instance using the Ansible playbook below,
 ## Code Mirrors
 
 * GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance/)
-* Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance/)
+* Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terrafot srm__gcloud-instance/)
 
 ## Configuration
 
