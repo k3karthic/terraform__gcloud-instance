@@ -1,4 +1,4 @@
-# Terraform - Deploy a single instance in Google Cloud
+# Terraform — Deploy a single instance in Google Cloud
 
 A [Terraform](https://www.terraform.io/) script to deploy a single instance in Google Cloud running under the [Always Free](https://cloud.google.com/free) tier.
 
@@ -7,7 +7,7 @@ A custom VPC allows for more control over network security. The Terraform script
     * GitHub: [github.com/k3karthic/terraform__gcloud-vpc](https://github.com/k3karthic/terraform__gcloud-vpc)
     * Codeberg: [codeberg.org/k3karthic/terraform__gcloud-vpc](https://codeberg.org/k3karthic/terraform__gcloud-vpc)
 
-The following Ansible playbook covers the Basic setup (e.g. swap, fail2ban),
+The following Ansible playbook covers the Basic setup (e.g, swap, fail2ban),
 * ansible__freebsd-basic
     * GitHub: [github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic)
     * Codeberg: [codeberg.org/k3karthic/ansible__freebsd-basic](https://codeberg.org/k3karthic/ansible__freebsd-basic)
@@ -24,9 +24,9 @@ Create a file to store the [Terraform input variables](https://www.terraform.io/
 
 ## Authentication
 
-Documentation for the [HashiCorp Google provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) is available at [registry.terraform.io/providers/hashicorp/google/latest/docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs).
+[Google provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) documentation is at [registry.terraform.io/providers/hashicorp/google/latest/docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs).
 
-[Google Cloud Shell](https://cloud.google.com/shell/) can deploy this this script without configuration.
+[Google Cloud Shell](https://cloud.google.com/shell/) can deploy this script without configuration.
 
 ## Deployment
 
