@@ -20,7 +20,7 @@ You can get a free hostname for the instance using the Ansible playbook below,
 ## Code Mirrors
 
 * GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance/)
-* Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terrafot srm__gcloud-instance/)
+* Codeberg: [codeberg.org/k3karthic/terraform__gcloud-instance](https://codeberg.org/k3karthic/terraform__gcloud-instance/)
 
 ## Configuration
 
