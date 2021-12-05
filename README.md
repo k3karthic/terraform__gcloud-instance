@@ -25,7 +25,8 @@ You can get a free hostname for the instance using the Ansible playbook below,
 ## Configuration
 
 **Step 1:** Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Use `uscentral.tfvars.sample` as a reference. Keep `uscentral.tfvars` as the filename or change the name in the following files,
-* `bin/plan.sh`
+1. `.gitignore`
+1. `bin/plan.sh`
 
 **Step 2:** Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC, use `default` as the value.
 
@@ -61,18 +62,15 @@ $ ./bin/apply.sh
 
 ## Encryption
 
-Encrypt sensitive files (input variables, [Terraform state](https://www.terraform.io/docs/language/state/index.html) files) before saving them. `.gitignore` must contain the unencrypted file paths.
-
-You must add the unencrypted file paths to `.gitignore`.
+Encrypt sensitive files (Terraform [input variables](https://www.terraform.io/docs/language/values/variables.html) and [state](https://www.terraform.io/docs/language/state/index.html)) before saving them. `.gitignore` must contain the unencrypted file paths.
 
 Use the following command to decrypt the files after cloning the repository,
-
 ```
 $ ./bin/decrypt.sh
 ```
 
-Use the following command after running terraform to update the encrypted files,
-
+Use the following command after running `bin/apply.sh` to encrypt the updated state files,
 ```
 $ ./bin/encrypt.sh <gpg key id>
 ```
+
