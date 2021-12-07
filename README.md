@@ -24,13 +24,12 @@ You can get a free hostname for the instance using the Ansible playbook below,
 
 ## Configuration
 
-**Step 1:** Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Use `uscentral.tfvars.sample` as a reference. Keep `uscentral.tfvars` as the filename or change the name in the following files,
-1. `.gitignore`
-1. `bin/plan.sh`
-
-**Step 2:** Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC, use `default` as the value.
-
-**Step 3:** Create a hostname in [YDNS](https://ydns.io/) and update the same in `ydns_host`.
+1. Create a file to store the [Terraform input variables](https://www.terraform.io/docs/language/values/variables.html). Use `uscentral.tfvars.sample` as a reference. Keep `uscentral.tfvars` as the filename or change the name in the following files,
+   1. `.gitignore`
+   1. `bin/plan.sh`
+1. Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC, use `default` as the value.
+2. Set `zone` to an available zone in the same region as `subnetwork`. List of zones by region are at [cloud.google.com/compute/docs/regions-zones/#available](https://cloud.google.com/compute/docs/regions-zones/#available).
+3. Create a hostname in [YDNS](https://ydns.io/) and update the same in `ydns_host`.
 
 ## Authentication
 
@@ -59,6 +58,14 @@ $ ./bin/view.sh
 ```
 $ ./bin/apply.sh
 ```
+
+**Step 4:** Display the created instance using the following command,
+```
+$ terraform show google_compute_instance.free
+```
+
+![terraform show screenshot 1](resources/terraform_show_1.png)
+![terraform show screenshot 2](resources/terraform_show_2.png)
 
 ## Encryption
 
