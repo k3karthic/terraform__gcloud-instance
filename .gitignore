@@ -3,5 +3,4 @@ tf.plan
 uscentral.tfvars
 terraform.tfstate
 terraform.tfstate.backup
-ssh/google
 ssh/google.pub
