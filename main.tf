@@ -10,6 +10,8 @@ variable "image_os" {}
 variable "image_id" {}
 
 variable "ydns_host" {}
+variable "njalla_domain" {}
+variable "njalla_domain_id" {}
 
 /*
  * Providers
@@ -67,12 +69,15 @@ resource "google_compute_instance" "free" {
   labels = {
     "os"                  = var.image_os
     "ydns_host"           = "yes"
+    "njalla_host"         = "yes"
     "tor_service"         = "yes"
     "shadowsocks_service" = "yes"
   }
 
   metadata = {
-    "ydns_host" = var.ydns_host
-    "ssh-keys"  = "freebsd:${file("ssh/google.pub")}"
+    "ydns_host"        = var.ydns_host
+    "njalla_domain"    = var.njalla_domain
+    "njalla_domain_id" = var.njalla_domain_id
+    "ssh-keys"         = "freebsd:${file("ssh/google.pub")}"
   }
 }
