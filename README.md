@@ -17,6 +17,11 @@ You can get a free hostname for the instance using the Ansible playbook below,
     * GitHub: [github.com/k3karthic/ansible__gcloud-ydns](https://github.com/k3karthic/ansible__gcloud-ydns)
     * Codeberg: [codeberg.org/k3karthic/ansible__gcloud-ydns](https://codeberg.org/k3karthic/ansible__gcloud-ydns)
 
+Use a [Njalla](https://njal.la/) hostname for the instance using the Ansible playbook below,
+* ansible__gcloud-njalla-dns
+    * GitHub: [github.com/k3karthic/ansible__gcloud-njalla-dns](https://github.com/k3karthic/ansible__gcloud-njalla-dns)
+    * Codeberg: [codeberg.org/k3karthic/ansible__gcloud-njalla-dns](https://codeberg.org/k3karthic/ansible__gcloud-njalla-dns)
+
 ## Code Mirrors
 
 * GitHub: [github.com/k3karthic/terraform__gcloud-instance](https://github.com/k3karthic/terraform__gcloud-instance/)
