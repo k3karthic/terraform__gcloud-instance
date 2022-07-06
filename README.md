@@ -36,6 +36,8 @@ Use a [Njalla](https://njal.la/) hostname for the instance using the Ansible pla
 2. Set `zone` to an available zone in the same region as `subnetwork`. List of zones by region are at [cloud.google.com/compute/docs/regions-zones/#available](https://cloud.google.com/compute/docs/regions-zones/#available).
 3. Create a hostname in [YDNS](https://ydns.io/) and update the same in `ydns_host`.
 
+**Note:** Image ID can be found in the release announcement from the FreeBSD website at [https://www.freebsd.org/releases/](https://www.freebsd.org/releases/).
+
 ## Authentication
 
 [Google provider](https://registry.terraform.io/providers/hashicorp/google/latest/docs) documentation is at [registry.terraform.io/providers/hashicorp/google/latest/docs](https://registry.terraform.io/providers/hashicorp/google/latest/docs).
