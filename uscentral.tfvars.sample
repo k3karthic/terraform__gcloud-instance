@@ -1,3 +1,4 @@
+project = "<google cloud project>"
 name = "free"
 zone = "us-central1-a"
 subnetwork = "personal-network--uscentral1-subnet"
@@ -5,6 +6,5 @@ subnetwork = "personal-network--uscentral1-subnet"
 image_os = "freebsd"
 image_id = "freebsd-org-cloud-dev/freebsd-13-0-release-amd64"
 
-ydns_host = "XXXX.ydns.eu"
 njalla_domain = "XXXXX"
 njalla_domain_id = "<id>"

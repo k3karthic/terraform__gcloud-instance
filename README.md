@@ -12,11 +12,6 @@ The following Ansible playbook covers basic setup for FreeBSD (e.g, swap, fail2b
     * GitHub: [github.com/k3karthic/ansible__freebsd-basic](https://github.com/k3karthic/ansible__freebsd-basic)
     * Codeberg: [codeberg.org/k3karthic/ansible__freebsd-basic](https://codeberg.org/k3karthic/ansible__freebsd-basic)
 
-You can get a free hostname for the instance using the Ansible playbook below,
-* ansible__gcloud-ydns
-    * GitHub: [github.com/k3karthic/ansible__gcloud-ydns](https://github.com/k3karthic/ansible__gcloud-ydns)
-    * Codeberg: [codeberg.org/k3karthic/ansible__gcloud-ydns](https://codeberg.org/k3karthic/ansible__gcloud-ydns)
-
 Use a [Njalla](https://njal.la/) hostname for the instance using the Ansible playbook below,
 * ansible__gcloud-njalla-dns
     * GitHub: [github.com/k3karthic/ansible__gcloud-njalla-dns](https://github.com/k3karthic/ansible__gcloud-njalla-dns)
@@ -33,8 +28,10 @@ Use a [Njalla](https://njal.la/) hostname for the instance using the Ansible pla
    1. `.gitignore`
    1. `bin/plan.sh`
 1. Create a custom VPC and update the subnet name in `subnetwork`. To skip creating a VPC, use `default` as the value.
-2. Set `zone` to an available zone in the same region as `subnetwork`. List of zones by region are at [cloud.google.com/compute/docs/regions-zones/#available](https://cloud.google.com/compute/docs/regions-zones/#available).
-3. Create a hostname in [YDNS](https://ydns.io/) and update the same in `ydns_host`.
+1. Change `name` if you would like to change the name of the instance.
+1. Set `project` to the name of your Google Cloud Project.
+1. Set `zone` to an available zone in the same region as `subnetwork`. List of zones by region are at [cloud.google.com/compute/docs/regions-zones/#available](https://cloud.google.com/compute/docs/regions-zones/#available).
+1. Create a hostname in Njalla and update the same in `njalla_domain` and `njalla_domain_id`.
 
 **Note:** Image ID can be found in the release announcement from the FreeBSD website at [https://www.freebsd.org/releases/](https://www.freebsd.org/releases/).
 

@@ -2,6 +2,7 @@
  * Variables
  */
 
+variable "project" {}
 variable "name" {}
 variable "zone" {}
 variable "subnetwork" {}
@@ -9,7 +10,6 @@ variable "subnetwork" {}
 variable "image_os" {}
 variable "image_id" {}
 
-variable "ydns_host" {}
 variable "njalla_domain" {}
 variable "njalla_domain_id" {}
 
@@ -36,6 +36,7 @@ resource "google_service_account" "free" {
 //
 
 resource "google_compute_instance" "free" {
+  project = var.project
   name = var.name
   zone = var.zone
 
@@ -56,6 +57,7 @@ resource "google_compute_instance" "free" {
 
   network_interface {
     subnetwork = var.subnetwork
+	subnetwork_project = var.project
 
     // Ephemeral Public IP
     access_config {}
@@ -68,14 +70,12 @@ resource "google_compute_instance" "free" {
 
   labels = {
     "os"                  = var.image_os
-    "ydns_host"           = "yes"
     "njalla_host"         = "yes"
     "tor_service"         = "yes"
     "shadowsocks_service" = "yes"
   }
 
   metadata = {
-    "ydns_host"        = var.ydns_host
     "njalla_domain"    = var.njalla_domain
     "njalla_domain_id" = var.njalla_domain_id
     "ssh-keys"         = "freebsd:${file("ssh/google.pub")}"
